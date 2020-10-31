@@ -10,6 +10,8 @@ body {
 }
 
 
+
+
 section {
     display: flex;
     justify-content: center;
@@ -27,25 +29,30 @@ section {
    
 }
 
-.hero__image--left, .hero__image--right, .usage__image, .checkout__image {
+.usage__image, .checkout__image {
     width: 300px;
 }
 
+.hero__image--right{
+    width: 600px;
+}
+
 .hero__image-wrapper {
+    
     position: relative;
     padding-bottom: 146px;
 }
 
-.hero__image--left {
-    left: 320px;
-    top: 20px;
-    position: absolute;
-}
+
 
 .hero__image--right {
-    right: 320px;
-    top: 50px;
-    position: absolute;
+    
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+  
 }
 
 .logo {
@@ -63,21 +70,29 @@ section {
 }
 
 .nav__item {
+    margin: 0 5px;
+    text-align: center;
+    
+}
+
+.nav__item-href {
+    margin: 0 5px;
+    text-decoration: none;
     cursor: pointer;
     font-weight: 600;
     font-size: 16px;
     line-height: 28px;
-    text-align: center;
+    
     letter-spacing: 0.2px;
     color: #252B42;
-    margin: 0 5px;
+    transition: color .3s;
 }
 
-.nav__item:first-child {
+.active-nav {
     color: rgba(250, 74, 12, 1);
 }
 
-.nav__item:hover {
+.nav__item-href:hover {
     color: rgba(250, 74, 12, 1);
 }
 
@@ -171,6 +186,16 @@ section {
     line-height: 36px;
     letter-spacing: 0.1px;
     color: #FFFFFF;
+    transition: all 0.2s;
+}
+
+.button__play-store:hover {
+    background-color: hsl(16, 100%, 49%);
+    
+}
+
+.button__app-store:hover{
+    background-color: #e4e4e452;
 }
 
 .button__app-store {
@@ -198,6 +223,8 @@ section {
     letter-spacing: 0.1px;
 }
 
+
+
 .usage__create-account, .explore__varieties, .checkout__checkout {
     text-decoration: none;
     font-weight: bold;
@@ -205,6 +232,11 @@ section {
     line-height: 36px;
     letter-spacing: 0.1px;
     color: #FA4A0C;
+}
+
+.usage__create-account:hover, .explore__varieties:hover, .checkout__checkout:hover {
+    color: #f81404;
+    cursor: pointer;
 }
 
 .usage__heading--secondary, .explore__heading, .checkout__heading {
@@ -236,7 +268,7 @@ section {
 }
 
 .explore, .checkout {
-    margin-bottom: 200px;
+    margin-bottom: 150px;
 }
 
 .download {
@@ -279,6 +311,10 @@ section {
 
 .download__button:nth-child(2) {
     padding: 16px 45px;
+}
+
+.social {
+    cursor: pointer;
 }
 
 .download__copyright {
@@ -335,30 +371,16 @@ section {
     .logo {
         margin: 0;
     }
-
-    .hero__image--left {
-        
-        left:250px;
-    }
-    
-    .hero__image--right {
-        
-        right: 250px;
-    }
     
 }
 
 
 @media only screen and (max-width: 1024px) {
-    .hero__image--left {
-        
-        left:100px;
-    }
-    
-    .hero__image--right {
-        
-        right: 100px;
-    }
+
+
+  
+
+
     .download__copyright {
         text-align: center;
     }
@@ -387,7 +409,7 @@ section {
             font-size: xx-large;
             line-height: 40px;
         }
-        .explore__image, .hero__image--left, .hero__image--right, .usage__image, .checkout__image {
+        .explore__image,.usage__image, .checkout__image {
             width: 180px;
         }
         
@@ -436,3 +458,49 @@ section {
        
 
     }
+
+    @media only screen and (max-width: 690px){
+        .hero__image--right {
+            width: 500px;
+        }
+    }
+
+    @media only screen and (max-width: 600px){
+        .hero__image--right {
+            width: 440px;
+            top: -120px;
+        }
+    }
+    @media only screen and (max-width: 550px){
+        .hero__image--right {
+            width: 350px;
+        }
+    }
+    @media only screen and (max-width: 500px){
+        .hero__image--right {
+            width: 300px;
+        }
+    }
+
+    @media only screen and (max-width: 400px){
+        .hero__image--right {
+            width: 250px;
+        }
+    }
+
+
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+      }

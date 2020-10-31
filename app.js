@@ -28,3 +28,64 @@ hamburger.addEventListener('click', ()=> {
 
     
 })
+
+
+
+
+document.addEventListener('click', (e)=> {
+if(e.target.getAttribute('href') || e.target.classList.contains('myBtn')){
+        if (nav.classList.contains('active')) {
+        nav.classList.add('animate__animated', 'animate__fadeOutRightBig')
+        hamburger.classList.add('hamburger--stacked')
+        
+        setTimeout(() => {
+            nav.classList.remove('active', 'animate__animated', 'animate__fadeInRight')
+            hamburger.classList.remove('hamburger--close')
+            
+        }, 200)}
+}
+})
+    
+
+    
+
+
+
+
+
+const links = document.querySelectorAll('a')
+
+links.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault()
+        const href = e.target.getAttribute('href')
+        const offsetTop = document.querySelector(href).offsetTop
+
+        scroll({
+            top: offsetTop - 50,
+            behavior: 'smooth'
+        })
+    })
+})
+
+
+
+const mybutton = document.getElementById("myBtn");
+
+window.onscroll = () => scrollFunction()
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+function topFunction() {
+    scroll({
+        top: 0,
+        behavior: 'smooth'
+    })
+
+}

@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header " id="home">
 
         <div class="container container-fluid">
             <div class="row middle-xs ">
@@ -29,10 +29,10 @@
                         </div>
                         <nav class="nav js-nav">
                             <div class="nav-item-wrapper">
-                                <div class="nav__item">Home</div>
-                                <div class="nav__item">Product</div>
-                                <div class="nav__item">Faq</div>
-                                <div class="nav__item">Contact</div>
+                                <div class="nav__item"><a class="active-nav nav__item-href" href="#home">Home</a></div>
+                                <div class="nav__item"><a class="nav__item-href" href="#product">Product</a></div>
+                                <div class="nav__item"><a class="nav__item-href" href="#faq">Faq</a></div>
+                                <div class="nav__item"><a class="nav__item-href" href="#contact">Contact</a></div>
                             </div>
                         </nav>
                     </div>
@@ -42,7 +42,7 @@
     </header>
 
 
-    <section class="hero">
+    <section class="hero" id="product">
         <div class="overlay">
             <div class="container container-fluid">
 
@@ -59,8 +59,8 @@
                     </div>
                         <div class="hero__image-wrapper">
 
-                            <img class="hero__image--right" src="./img/right.png" alt="">
-                            <img class="hero__image--left" src="./img/left.png" alt="">
+                            <img class="hero__image--right" src="./img/2ph.png" alt="">
+                            
 
 
                         </div>
@@ -76,7 +76,7 @@
             <div class="horizontal-line"> </div>
             <div class="row center-xs">
                 <div class="col-xs-10">
-                    <div class="usage__heading">How the app works</div>
+                    <div class="usage__heading" id="faq">How the app works</div>
                 </div>
             </div>
             <div class="row  middle-md center-xs">
@@ -99,7 +99,12 @@
 
     <section class="explore">
         <div class="container container-fluid">
-            <div class="row center-xs middle-xs">
+            <div class="row center-xs middle-xs reverse ">
+              
+                <div class="col-md-5 col-xs-12 ">
+                    <img class="explore__image" src="./img/deli.png" alt="">
+                </div>
+
                 <div class="col-md-5 col-xs-12 ">
                     <div class="explore__varieties">Explore varieties</div>
 
@@ -107,9 +112,6 @@
                     <div class="explore__description">Shop for your favorite meals or drinks and enjoy while doing it.
                     </div>
 
-                </div>
-                <div class="col-md-5 col-xs-12 ">
-                    <img class="explore__image" src="./img/deli.png" alt="">
                 </div>
             </div>
         </div>
@@ -136,7 +138,7 @@
         </div>
     </section>
 
-    <section class="download">
+    <section class="download" id="contact">
         <div class="overlay">
             <div class="container container-fluid">
                 <div class="row center-xs ">
@@ -161,14 +163,15 @@
         <div class="container container-fluid">
             <div class="row center-xs middle-xs">
                 <div class="col-md-3 col-xs-12"><img class="logo" src="./img/logo.svg" alt=""></div>
-                <div class="col-md-3 col-xs-12"><img src="./img/instagram.svg" alt=""></div>
+                <div class="col-md-3 col-xs-12"><img class="social" src="./img/instagram.svg" alt=""></div>
                 <div class="col-md-3 col-xs-12">
                     <div class="download__copyright">Copyright 2020 Bella Onojie.com</div>
                 </div>
             </div>
         </div>
     </footer>
-
+    <button class="myBtn" onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    
     <script src="app.js"></script>
 </body>
 
