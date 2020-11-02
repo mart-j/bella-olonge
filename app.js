@@ -11,11 +11,11 @@ document.addEventListener('scroll', (e)=> {
         navItem.forEach(item => item.classList.remove('active-nav'))
         navItem[1].classList.add('active-nav')
     }
-    if(window.pageYOffset > 1383) {
+    if(window.pageYOffset > 1000) {
         navItem.forEach(item => item.classList.remove('active-nav'))
         navItem[2].classList.add('active-nav')
     }
-    if(window.pageYOffset> 4000) {
+    if(window.pageYOffset> 3600) {
         navItem.forEach(item => item.classList.remove('active-nav'))
         navItem[3].classList.add('active-nav')
     }
