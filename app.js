@@ -1,8 +1,32 @@
 const nav = document.querySelector('.js-nav')
 const hamburger = document.querySelector('.js-hamburger')
+const navItem = document.querySelectorAll('.js-nav-item')
+
+
+document.addEventListener('scroll', (e)=> {
+    if(window.pageYOffset < 95) {
+        navItem.forEach(item => item.classList.remove('active-nav'))
+        navItem[0].classList.add('active-nav')
+    }if(window.pageYOffset > 95) {
+        navItem.forEach(item => item.classList.remove('active-nav'))
+        navItem[1].classList.add('active-nav')
+    }
+    if(window.pageYOffset > 1383) {
+        navItem.forEach(item => item.classList.remove('active-nav'))
+        navItem[2].classList.add('active-nav')
+    }
+    if(window.pageYOffset> 4000) {
+        navItem.forEach(item => item.classList.remove('active-nav'))
+        navItem[3].classList.add('active-nav')
+    }
+    
+})
 
 
 hamburger.addEventListener('click', ()=> {
+
+
+    
     if (nav.classList.contains('active')) {
         nav.classList.add('animate__animated', 'animate__fadeOutRightBig')
         hamburger.classList.add('hamburger--stacked')
@@ -60,6 +84,7 @@ links.forEach(link => {
         e.preventDefault()
         const href = e.target.getAttribute('href')
         const offsetTop = document.querySelector(href).offsetTop
+        console.log(offsetTop)
 
         scroll({
             top: offsetTop - 50,
