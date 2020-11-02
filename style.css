@@ -18,11 +18,13 @@ section {
     justify-content: center;
 }
 .overlay {
+    padding-top: 70px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 .hero {
+    
     background-image: url('./img/hero.jpeg');
     background-repeat: no-repeat;
     background-position: center center;
@@ -145,7 +147,7 @@ section {
 }
 
 .hero__heading--secondary {
-    margin-top: 73px;
+    
     font-weight: bold;
     font-size: 24px;
     line-height: 36px;
@@ -280,7 +282,7 @@ section {
 }
 
 .download__heading {
-    margin-top: 140px;
+    margin-top: 70px;
     margin-bottom: 10px;
     font-weight: bold;
     font-size: 40px;
